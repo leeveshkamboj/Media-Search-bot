@@ -1,6 +1,6 @@
 FROM python:3-slim-buster
 
-RUN pip install --upgrade pip
+RUN pip3 install --upgrade pip
 
 ENV USER botx
 ENV HOME /home/$USER
@@ -14,7 +14,7 @@ WORKDIR $BOT
 
 
 COPY requirements.txt requirements.txt
-RUN pip install --user --no-cache-dir -r requirements.txt
+RUN pip3 install --user --no-cache-dir -r requirements.txt
 
 COPY . .
 
